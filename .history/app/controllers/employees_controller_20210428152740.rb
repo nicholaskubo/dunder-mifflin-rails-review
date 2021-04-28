@@ -13,18 +13,9 @@ class EmployeesController < ApplicationController
 
         def create
             @employee = Employee.new(employee_params)
-            if @employee.valid?
             @employee.save
             redirect_to employee_path(@employee)
-            else redirect_to employees_path
-            end
         end
-
-        def edit
-          @employee = Employee.find(params[:id])
-          
-        end
-        
 
         def update
           @employee = Employee.find(params[:id])

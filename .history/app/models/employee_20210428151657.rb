@@ -1,11 +1,8 @@
 class Employee < ApplicationRecord
     belongs_to :dog
-
-    validates :alias, uniqueness: true
-    validates :title, uniqueness: true
     
     def to_s
-        
+        byebug
         self.first_name + " " + self.last_name + ", " + self.alias + ", " + self.title + ", " + self.office 
     end
     
